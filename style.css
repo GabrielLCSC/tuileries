@@ -6,6 +6,11 @@
   font-family: "Ubuntu";
 }
 
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
 header .navbar {
   background-color: rgb(255, 139, 139);
   width: 100%;
@@ -23,4 +28,33 @@ header .navbar ul li {
 header .navbar ul li a {
   font-size: 1.6rem;
   text-decoration: none;
+}
+
+.pres {
+  margin-top: 100px;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+.pres h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.pres h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+.pres p {
+  font-size: 1.4rem;
+  margin-bottom: 50px;
+  line-height: 3rem;
+}
+.pres .pres-content {
+  display: flex;
+  gap: 4%;
+}
+.pres .pres-content img {
+  width: 40%;
+}
+.pres .pres-content p {
+  font-size: 1.4rem;
 }/*# sourceMappingURL=style.css.map */
