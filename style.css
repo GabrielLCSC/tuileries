@@ -54,7 +54,31 @@ header .navbar ul li a {
 }
 .pres .pres-content img {
   width: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .pres .pres-content p {
   font-size: 1.4rem;
+}
+.bloc2 {
+  margin-top: 100px;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+.bloc2 h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  margin-bottom: 50px;
+}
+.bloc2 .gridbloc {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+.bloc2 .gridbloc .image-grid {
+  width: 450px;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 1rem;
+  margin-top: 2rem;
 }/*# sourceMappingURL=style.css.map */
