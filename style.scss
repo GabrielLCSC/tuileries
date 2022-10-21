@@ -8,8 +8,9 @@
 
 header{
     position: sticky; top: 0;
-    .navbar{
+    #navbar{
         
+        transition: ease 0.3s;
         background-color: rgb(255, 139, 139);
         width: 100%;
         height: 90px;
@@ -20,19 +21,60 @@ header{
             gap: 10%;
             justify-content: center;
             
-            li{
+            #elements{
+                margin-top: 3rem;
                 
-                margin-top: 33px;
                 list-style-type: none;
 
                 a{
+                    padding: 0.5rem;
                     font-size: 1.6rem;
                     text-decoration: none;
+
+                    display: inline-block;
+                    vertical-align: middle;
+                    -webkit-transform: perspective(1px) translateZ(0);
+                    transform: perspective(1px) translateZ(0);
+                    position: relative;
+                    overflow: hidden;
+                }
+                a:before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    left: 0;
+                    right: 100%;
+                    bottom: 0;
+                    
+                    background: rgb(255, 240, 240);
+                    height: 1.5px;
+                    -webkit-transition-property: right;
+                    transition-property: right;
+                    -webkit-transition-duration: 0.3s;
+                    transition-duration: 0.3s;
+                    -webkit-transition-timing-function: ease-out;
+                    transition-timing-function: ease-out;
+                }
+                a:hover:before, a:focus:before, a:active:before {
+                    right: 0;
                 }
             }
         }
     }
 }
+
+#navbar.light{
+    background-color: rgba(255, 143, 143, 0.559);
+    transition: ease 0.3s;
+    width: 100%;
+    height: 70px;
+}
+.is-scroll{
+    
+    margin-top: 2rem;
+    list-style-type: none;
+}
+
 
 .pres{
     margin-top: 100px;
@@ -95,5 +137,11 @@ header{
             padding: 1rem;
             margin-top: 2rem;
         }
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .pres-content{
+        display: block;
     }
 }

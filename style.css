@@ -11,23 +11,58 @@ header {
   position: sticky;
   top: 0;
 }
-header .navbar {
+header #navbar {
+  transition: ease 0.3s;
   background-color: rgb(255, 139, 139);
   width: 100%;
   height: 90px;
 }
-header .navbar ul {
+header #navbar ul {
   display: flex;
   gap: 10%;
   justify-content: center;
 }
-header .navbar ul li {
-  margin-top: 33px;
+header #navbar ul #elements {
+  margin-top: 3rem;
   list-style-type: none;
 }
-header .navbar ul li a {
+header #navbar ul #elements a {
+  padding: 0.5rem;
   font-size: 1.6rem;
   text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  overflow: hidden;
+}
+header #navbar ul #elements a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: rgb(255, 240, 240);
+  height: 1.5px;
+  transition-property: right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+header #navbar ul #elements a:hover:before, header #navbar ul #elements a:focus:before, header #navbar ul #elements a:active:before {
+  right: 0;
+}
+
+#navbar.light {
+  background-color: rgba(255, 143, 143, 0.559);
+  transition: ease 0.3s;
+  width: 100%;
+  height: 70px;
+}
+
+.is-scroll {
+  margin-top: 2rem;
+  list-style-type: none;
 }
 
 .pres {
@@ -81,4 +116,10 @@ header .navbar ul li a {
      object-fit: cover;
   padding: 1rem;
   margin-top: 2rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .pres-content {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
