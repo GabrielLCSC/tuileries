@@ -1,17 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 10px;
     font-family: 'Ubuntu';
+    
 }
+html{
+    color: #2C282A;
+}
+body{
+    background-color: #FEFDF4;
+}
+
+// header deco
 
 header{
     position: sticky; top: 0;
-    #navbar{
-        
+    #navbar.light{
+        background-color: #775c6a9e;
         transition: ease 0.3s;
-        background-color: rgb(255, 139, 139);
+        width: 100%;
+        height: 70px;
+    }
+    #navbar{
+
+        transition: ease 0.3s;
+        background-color: #775C6A;
         width: 100%;
         height: 90px;
         
@@ -21,16 +38,17 @@ header{
             gap: 10%;
             justify-content: center;
             
-            #elements{
+            .elements{
                 margin-top: 3rem;
-                
                 list-style-type: none;
-
+            
+            
+            
                 a{
                     padding: 0.5rem;
                     font-size: 1.6rem;
                     text-decoration: none;
-
+                    color: #FEFBD0;
                     display: inline-block;
                     vertical-align: middle;
                     -webkit-transform: perspective(1px) translateZ(0);
@@ -46,7 +64,7 @@ header{
                     right: 100%;
                     bottom: 0;
                     
-                    background: rgb(255, 240, 240);
+                    background: #FEFBD0;
                     height: 1.5px;
                     -webkit-transition-property: right;
                     transition-property: right;
@@ -58,25 +76,16 @@ header{
                 a:hover:before, a:focus:before, a:active:before {
                     right: 0;
                 }
+
             }
+            
         }
     }
 }
 
-#navbar.light{
-    background-color: rgba(255, 143, 143, 0.559);
-    transition: ease 0.3s;
-    width: 100%;
-    height: 70px;
-}
-.is-scroll{
-    
-    margin-top: 2rem;
-    list-style-type: none;
-}
+// Partie Accueil deco
 
-
-.pres{
+#pres{
     margin-top: 100px;
     margin-left: 4%;
     margin-right: 4%;
@@ -88,6 +97,10 @@ header{
     h2{
         font-size: 1.4rem;
         margin-bottom: 20px;
+        color: #F4828C;
+    }
+    .souspres{
+        color: #6e656a;
     }
     p{
         font-size: 1.4rem;
@@ -108,13 +121,12 @@ header{
         p{
             font-size: 1.4rem;
         }
-        .pres-p{
-
-        }
     }
 }
 
-.bloc2{
+// Partie Photos deco
+
+#bloc2{
     margin-top: 100px;
     margin-left: 4%;
     margin-right: 4%;
@@ -127,21 +139,219 @@ header{
     .gridbloc{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    
-    
-    
+        margin-bottom: 100px;
+
         .image-grid{
             width: 450px;
             height: 350px;
             object-fit: cover;
             padding: 1rem;
-            margin-top: 2rem;
+            margin-top: 2rem;    
         }
     }
 }
 
-@media only screen and (min-width: 1000px){
-    .pres-content{
+// Partie Accessibilité deco
+
+#titre3{
+    font-size: 3rem;   
+    margin-bottom: 10px;
+    margin-bottom: 50px;
+    margin-left: 4%;
+}
+#bloc3{
+    margin-top: 100px;
+    margin-left: 4%;
+    margin-right: 4%;
+    display: flex;
+    gap: 4%;
+
+    a img{
+        width: 500px;
+        height: 400px;
+        object-fit: cover;
+    }
+    div{
+        p{
+            font-size: 1.4rem;
+        margin-bottom: 50px;
+        line-height: 3rem;
+        
+        }
+        
+        .click{
+            font-style: italic;
+        }
+    }
+    
+}
+
+// Partie footer deco
+
+footer{
+    .footbar{
+        height: 120px;
+        background-color: #775C6A;
+        p{
+            margin-left: 3%;
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            color: #FEFBD0;
+        }
+        .sources{
+            
+            display: flex;
+            justify-content: center;
+            gap: 10%;
+            margin-top: 2rem;
+            
+            a{
+                text-decoration: none;
+                font-size: 1.4rem;
+                color: #FEFBD0;
+                
+
+            }
+        }
+    }
+}
+
+// Responsive 1/2 
+
+@media screen and (max-width: 1000px){
+    #pres{
+        margin-top: 100px;
+        margin-left: 4%;
+        margin-right: 4%;
+        h1{
+            font-size: 3rem;   
+            margin-bottom: 10px;
+            
+        }
+        h2{
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 1.4rem;
+            margin-bottom: 50px;
+            line-height: 3rem;
+        }
+    
+        .pres-content{
+            display: block;
+            gap: 4%;
+            
+    
+            img{
+                width: 80%;
+                object-fit: cover;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            p{
+                font-size: 1.4rem;
+            }
+        }
+    }
+    #bloc3{
+        margin-top: 100px;
+        margin-left: 4%;
+        margin-right: 4%;
         display: block;
+        gap: 4%;
+    
+        .imglien{
+            margin-right: 10%;
+            width: 100%;
+            object-fit: cover;
+            
+        }
+        
+        div{
+            p{
+                font-size: 1.4rem;
+            margin-bottom: 50px;
+            line-height: 3rem;
+            
+            }
+            .annonces{
+                
+            }
+            .click{
+                font-style: italic;
+            }
+        }
+        
+    }
+}
+
+footer{
+    .footbar{
+        height: 120px;
+        background-color: #775C6A;
+        p{
+            text-align: center;
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            color: #FEFBD0;
+        }
+        .sources{
+            
+            display: flex;
+            justify-content: center;
+            gap: 10%;
+            margin-top: 2rem;
+            
+            a{
+                text-decoration: none;
+                font-size: 1.4rem;
+                color: #FEFBD0;
+                
+
+            }
+        }
+    }
+}
+
+// Responsive mobile 2/2 (Bénis sois-tu Alexis pour la technique du font-size px dans le * puis en rem pour le reste)
+
+@media screen and (max-width: 500px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 8px;
+        font-family: 'Ubuntu';
+        
+    }
+    
+}
+@media screen and (max-width: 400px){
+    #bloc2{
+        margin-top: 100px;
+        margin-left: 4%;
+        margin-right: 4%;
+    
+        h1{
+            font-size: 3rem;   
+            margin-bottom: 10px;
+            margin-bottom: 50px;
+        }
+        .gridbloc{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            margin-bottom: 100px;
+    
+            .image-grid{
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                padding: 1rem;
+                margin-top: 2rem;    
+            }
+        }
     }
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +7,28 @@
   font-family: "Ubuntu";
 }
 
+html {
+  color: #2C282A;
+}
+
+body {
+  background-color: #FEFDF4;
+}
+
 header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
+header #navbar.light {
+  background-color: rgba(119, 92, 106, 0.6196078431);
+  transition: ease 0.3s;
+  width: 100%;
+  height: 70px;
+}
 header #navbar {
   transition: ease 0.3s;
-  background-color: rgb(255, 139, 139);
+  background-color: #775C6A;
   width: 100%;
   height: 90px;
 }
@@ -22,94 +37,89 @@ header #navbar ul {
   gap: 10%;
   justify-content: center;
 }
-header #navbar ul #elements {
+header #navbar ul .elements {
   margin-top: 3rem;
   list-style-type: none;
 }
-header #navbar ul #elements a {
+header #navbar ul .elements a {
   padding: 0.5rem;
   font-size: 1.6rem;
   text-decoration: none;
+  color: #FEFBD0;
   display: inline-block;
   vertical-align: middle;
   transform: perspective(1px) translateZ(0);
   position: relative;
   overflow: hidden;
 }
-header #navbar ul #elements a:before {
+header #navbar ul .elements a:before {
   content: "";
   position: absolute;
   z-index: -1;
   left: 0;
   right: 100%;
   bottom: 0;
-  background: rgb(255, 240, 240);
+  background: #FEFBD0;
   height: 1.5px;
   transition-property: right;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-header #navbar ul #elements a:hover:before, header #navbar ul #elements a:focus:before, header #navbar ul #elements a:active:before {
+header #navbar ul .elements a:hover:before, header #navbar ul .elements a:focus:before, header #navbar ul .elements a:active:before {
   right: 0;
 }
 
-#navbar.light {
-  background-color: rgba(255, 143, 143, 0.559);
-  transition: ease 0.3s;
-  width: 100%;
-  height: 70px;
-}
-
-.is-scroll {
-  margin-top: 2rem;
-  list-style-type: none;
-}
-
-.pres {
+#pres {
   margin-top: 100px;
   margin-left: 4%;
   margin-right: 4%;
 }
-.pres h1 {
+#pres h1 {
   font-size: 3rem;
   margin-bottom: 10px;
 }
-.pres h2 {
+#pres h2 {
   font-size: 1.4rem;
   margin-bottom: 20px;
+  color: #F4828C;
 }
-.pres p {
+#pres .souspres {
+  color: #6e656a;
+}
+#pres p {
   font-size: 1.4rem;
   margin-bottom: 50px;
   line-height: 3rem;
 }
-.pres .pres-content {
+#pres .pres-content {
   display: flex;
   gap: 4%;
 }
-.pres .pres-content img {
+#pres .pres-content img {
   width: 40%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.pres .pres-content p {
+#pres .pres-content p {
   font-size: 1.4rem;
 }
-.bloc2 {
+
+#bloc2 {
   margin-top: 100px;
   margin-left: 4%;
   margin-right: 4%;
 }
-.bloc2 h1 {
+#bloc2 h1 {
   font-size: 3rem;
   margin-bottom: 10px;
   margin-bottom: 50px;
 }
-.bloc2 .gridbloc {
+#bloc2 .gridbloc {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  margin-bottom: 100px;
 }
-.bloc2 .gridbloc .image-grid {
+#bloc2 .gridbloc .image-grid {
   width: 450px;
   height: 350px;
   -o-object-fit: cover;
@@ -118,8 +128,167 @@ header #navbar ul #elements a:hover:before, header #navbar ul #elements a:focus:
   margin-top: 2rem;
 }
 
-@media only screen and (min-width: 1000px) {
-  .pres-content {
+#titre3 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  margin-bottom: 50px;
+  margin-left: 4%;
+}
+
+#bloc3 {
+  margin-top: 100px;
+  margin-left: 4%;
+  margin-right: 4%;
+  display: flex;
+  gap: 4%;
+}
+#bloc3 a img {
+  width: 500px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#bloc3 div p {
+  font-size: 1.4rem;
+  margin-bottom: 50px;
+  line-height: 3rem;
+}
+#bloc3 div .click {
+  font-style: italic;
+}
+
+footer .footbar {
+  height: 120px;
+  background-color: #775C6A;
+}
+footer .footbar p {
+  margin-left: 3%;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  color: #FEFBD0;
+}
+footer .footbar .sources {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  margin-top: 2rem;
+}
+footer .footbar .sources a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #FEFBD0;
+}
+
+@media screen and (max-width: 1000px) {
+  #pres {
+    margin-top: 100px;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  #pres h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  #pres h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  #pres p {
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+    line-height: 3rem;
+  }
+  #pres .pres-content {
     display: block;
+    gap: 4%;
+  }
+  #pres .pres-content img {
+    width: 80%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  #pres .pres-content p {
+    font-size: 1.4rem;
+  }
+  #bloc3 {
+    margin-top: 100px;
+    margin-left: 4%;
+    margin-right: 4%;
+    display: block;
+    gap: 4%;
+  }
+  #bloc3 .imglien {
+    margin-right: 10%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #bloc3 div p {
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+    line-height: 3rem;
+  }
+  #bloc3 div .click {
+    font-style: italic;
+  }
+}
+footer .footbar {
+  height: 120px;
+  background-color: #775C6A;
+}
+footer .footbar p {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  color: #FEFBD0;
+}
+footer .footbar .sources {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  margin-top: 2rem;
+}
+footer .footbar .sources a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #FEFBD0;
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 8px;
+    font-family: "Ubuntu";
+  }
+}
+@media screen and (max-width: 400px) {
+  #bloc2 {
+    margin-top: 100px;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  #bloc2 h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    margin-bottom: 50px;
+  }
+  #bloc2 .gridbloc {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 100px;
+  }
+  #bloc2 .gridbloc .image-grid {
+    width: 300px;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding: 1rem;
+    margin-top: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -7,13 +7,3 @@ window.addEventListener("scroll", function() {
     navbar.classList.remove("light");
     }
 });
-
-window.addEventListener("scroll", function() {
-    let elements = document.getElementById("elements");
-    
-    if (window.pageYOffset > 0) {
-    elements.classList.add("is-scroll");
-    } else {
-    elements.classList.remove("is-scroll");
-    }
-});
