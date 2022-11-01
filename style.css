@@ -266,6 +266,27 @@ footer .footbar .sources a {
     font-size: 8px;
     font-family: "Ubuntu";
   }
+  #bloc2 {
+    margin-top: 100px;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  #bloc2 h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    margin-bottom: 50px;
+  }
+  #bloc2 .gridbloc {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 100px;
+  }
+  #bloc2 .gridbloc .image-grid {
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
 }
 @media screen and (max-width: 400px) {
   #bloc2 {
